@@ -16,13 +16,17 @@ print(mp3_files)
 print('--- Starting Playback ---')
 
 index = 0
-for mp3_item in mp3_files
+for mp3_item in mp3_files:
     # print name
     print("--- " + mp3_item + " ---")
 
     # play file
-    ##player = subprocess.Popen(["mplayer", "song.mp3", "-ss", "30"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    subprocess.Popen(['omxplayer', mp3_files[index]])
+    subprocess.Popen(["mplayer", './music/' + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    ##subprocess.Popen(['omxplayer', './music/' + mp3_item ])
+    #subprocess.Popen(['vlc', './music/' + mp3_item ])
+    #subprocess.Popen(["vlc-wrapper", " -s", './music/' + mp3_item])
+
+
     print('--- Playing ' + mp3_item + ' ---')
 
 
