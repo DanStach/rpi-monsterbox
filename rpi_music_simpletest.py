@@ -22,14 +22,11 @@ for mp3_item in mp3_files:
 
     # play file
     subprocess.Popen(["mplayer", './music/' + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    #subprocess.Popen(['omxplayer', './music/' + mp3_item ])
-    #subprocess.Popen(['vlc', './music/' + mp3_item ])
-    #subprocess.Popen(["vlc-wrapper", " -s", './music/' + mp3_item])
     print('--- Playing ' + mp3_item + ' ---')
 
 
-    # stop playback
-    ##subprocess.call(['killall', 'omxplayer'])
-    ##print('--- mp3_item ---')
+    # stop playback (untested code)
+    ##subprocess.call(['killall', 'mplayer'])
+    ##print('--- stop mp3_item ---')
 
     time.sleep(2)
