@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# The Sound class helps with MP3 playback
 
 import time
 from os import listdir
@@ -7,17 +8,20 @@ import subprocess
 class Sound:
 
 
-    def __init__(self, folderpath, fileExtension):
+    def __init__(self, folderpath, fileExtension, playerProgram):
         self.folderpath = folderpath
-        self.extension = fileExtension        
+        self.extension = fileExtension  
+        self.player = playerProgram        
+      
+        # gather a list of mp3 files in the folder
         mp3_files = [ f for f in listdir(self.folderpath) if f[-4:] == self.extension ]
         if not len(mp3_files) > 0:
-            print("No mp3 files found!")
+            print("Sound init: No audio files found!")
         self.mp3_files = mp3_files   
 
-    def playAllAudioFile(self):
+    def playAllAudioFile(self, delaySeconds):
         mp3_files = self.mp3_files 
-        print('--- Available mp3 files ---')
+        print('--- Available audio files ---')
         print(mp3_files)
         print('--- Starting Playback ---')
 
@@ -27,30 +31,23 @@ class Sound:
             print("--- " + mp3_item + " ---")
 
             # play file
-            subprocess.Popen(["mplayer", './music/' + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            subprocess.Popen([self.player, self.folderpath + "/" + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             print('--- Playing ' + mp3_item + ' ---')
 
-            # stop playback (untested code)
-            ##subprocess.call(['killall', 'mplayer'])
-            ##print('--- stop mp3_item ---')
+            time.sleep(delaySeconds)
 
-            time.sleep(2)
-
-    def playAudioFile(mp3_file):
-        print('--- mp3 files ---')
+    def playAudioFile(mp3_file, delaySeconds):
+        print('--- audio file ---')
         print(mp3_file)
         print('--- Starting Playback ---')
 
         # play file
-        subprocess.Popen(["mplayer", './music/' + mp3_file, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        subprocess.Popen([self.player self.folderpath + "/" + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print('--- Playing ' + mp3_item + ' ---')
 
-        time.sleep(2)
+        time.sleep(delaySeconds)
     
-
-    def stopPlayback(self):
+    def stopPlaybackAll(self):
         # stop playback
-        subprocess.call(['killall', 'mplayer'])
-        print('--- stop mp3_item ---')
-
-
+        subprocess.call(['killall', self.player])
+        print('--- stop audio item ---')

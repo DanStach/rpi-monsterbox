@@ -12,7 +12,8 @@ r1 = PiRelay.Relay(ChannelPin1, "RELAY1")
 # setup Sounds
 folderpath = "./music"
 fileExtension = ".mp3"
-sound1 = PiSound.Sound(folderpath, fileExtension)
+player = "mplayer"
+sound1 = PiSound.Sound(folderpath, fileExtension, player)
 
 for i in range(5):
     sound1.playAllAudioFile()
