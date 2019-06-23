@@ -7,9 +7,10 @@ import subprocess
 class Sound:
 
 
-    def __init__(self, folderpath):
+    def __init__(self, folderpath, fileExtension):
         self.folderpath = folderpath
-        mp3_files = [ f for f in listdir('./music') if f[-4:] == '.mp3' ]
+        self.extension = fileExtension        
+        mp3_files = [ f for f in listdir(self.folderpath) if f[-4:] == self.extension ]
         if not len(mp3_files) > 0:
             print("No mp3 files found!")
         self.mp3_files = mp3_files   
@@ -27,7 +28,6 @@ class Sound:
             # play file
             subprocess.Popen(["mplayer", './music/' + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             print('--- Playing ' + mp3_item + ' ---')
-
 
             # stop playback (untested code)
             ##subprocess.call(['killall', 'mplayer'])
