@@ -16,6 +16,7 @@ class Sound:
         self.mp3_files = mp3_files   
 
     def playAllAudioFile(self):
+        mp3_files = self.mp3_files 
         print('--- Available mp3 files ---')
         print(mp3_files)
         print('--- Starting Playback ---')
