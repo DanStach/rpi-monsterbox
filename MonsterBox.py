@@ -4,6 +4,7 @@
 import PiSound    
 import PiRelay
 import time
+import random
 
 # setup Relays
 ChannelPin1 = 4
@@ -15,9 +16,15 @@ fileExtension = ".mp3"
 player = "mplayer"
 sound1 = PiSound.Sound(folderpath, fileExtension, player)
 
-for i in range(5):
-    sound1.playAllAudioFile()
-    r1.onDelayOff(2)
+random.seed()
+for i in range(100):
 
-    time.sleep(5)
+    # Randomly play sound and open box
+    if (random.randint(0, 100) < 50)
+        sound1.playAllAudioFile()
+        r1.onDelayOff(5)
+        time.sleep(10) #wait for sounds finihs
+
+    # wait random time
+    time.sleep(random.randint(0, 10) )
     
