@@ -1,6 +1,20 @@
 # The goal of the monster box is to turn a motor (via relay), 
 #  play scary sounds, and flash lights
 
+# RPI3B pin out layout
+#
+# NeoPixel
+#  - Pin04 (5v)
+#  - Pin12 (Data) gpi018
+#  - Pin14 (ground)
+#
+# Relay
+#  - Pin07 (motor) gpio04
+#  - Pin11 (n/a) gpio17
+#  - Pin13 (n/a) gpio27
+#  - Pin15 (n/a) gpio22
+
+
 import PiSound    
 import PiRelay
 import time
