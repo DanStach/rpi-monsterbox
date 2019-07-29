@@ -7,7 +7,7 @@ from os import listdir
 import subprocess
 
 # get a list of MP3 files
-mp3_files = [ f for f in listdir('./music') if f[-4:] == '.mp3' ]
+mp3_files = [ f for f in listdir('../music/') if f[-4:] == '.mp3' ]
 if not len(mp3_files) > 0:
     print("No mp3 files found!")
 
@@ -21,7 +21,7 @@ for mp3_item in mp3_files:
     print("--- " + mp3_item + " ---")
 
     # play file
-    subprocess.Popen(["mplayer", './music/' + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.Popen(["mplayer", '../music/' + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print('--- Playing ' + mp3_item + ' ---')
 
 

@@ -32,13 +32,19 @@ sound1 = PiSound.Sound(folderpath, fileExtension, player)
 
 random.seed()
 for i in range(100):
+    print("#### For loop = ", i, " ####")
 
     # Randomly play sound and open box
-    if (random.randint(0, 100) < 50)
-        sound1.playAllAudioFile()
-        r1.onDelayOff(5)
-        time.sleep(10) #wait for sounds finihs
+    randomPlayNumber = random.randint(0, 100)
+    print("## randomPlayNumber = ", randomPlayNumber, " ##")
+    if (randomPlayNumber < 50):
+        print("## Playing monster box ##")
+        sound1.playAllAudioFile(0)
+        r1.onDelayOff(10)
+        time.sleep(10) #wait for sounds finish
 
     # wait random time
-    time.sleep(random.randint(0, 10) )
+    randomWaitNumber = random.randint(0, 10)
+    print("## randomWaitNumber = ", randomWaitNumber, " ##")
+    time.sleep(randomWaitNumber )
     

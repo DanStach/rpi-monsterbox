@@ -1,4 +1,4 @@
-import serial
+#import serial
 import time
 import RPi.GPIO as GPIO
 ChannelPin1 = 4

@@ -42,7 +42,7 @@ class Sound:
         print('--- Starting Playback ---')
 
         # play file
-        subprocess.Popen([self.player self.folderpath + "/" + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        subprocess.Popen([self.player, self.folderpath + "/" + mp3_item, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print('--- Playing ' + mp3_item + ' ---')
 
         time.sleep(delaySeconds)
