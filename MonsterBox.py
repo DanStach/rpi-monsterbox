@@ -26,7 +26,9 @@ subprocess.call(['amixer', 'cset', 'numid=3', '1'])
 
 # setup Relays
 ChannelPin1 = 4
+ChannelPin2 = 11
 r1 = PiRelay.Relay(ChannelPin1, "RELAY1")
+r2 = PiRelay.Relay(ChannelPin2, "RELAY2")
 
 # setup Sounds
 folderpath = "./music"
@@ -35,17 +37,23 @@ player = "mplayer"
 sound1 = PiSound.Sound(folderpath, fileExtension, player)
 
 random.seed()
-for i in range(100):
-    print("#### For loop = ", i, " ####")
+i = 0
+while(True)
+    i++
+    print("#### Playing monster box: loop = ", i, " ####")
 
-    # Randomly play sound and open box
-    randomPlayNumber = random.randint(0, 100)
-    print("## randomPlayNumber = ", randomPlayNumber, " ##")
-    if (randomPlayNumber < 50):
-        print("## Playing monster box ##")
-        sound1.playAllAudioFile(0)
-        r1.onDelayOff(10)
-        time.sleep(10) #wait for sounds finish
+    print("### Playing Audio##")
+    sound1.playAllAudioFile(0)
+
+    print("### Lights on##")
+    r2.on()
+
+    print("### Motor on and off ##")
+    r1.onDelayOff(10)
+    time.sleep(10) #wait for sounds finish
+
+    print("### Lights off##")
+    r2.off()
 
     # wait random time
     randomWaitNumber = random.randint(0, 10)
