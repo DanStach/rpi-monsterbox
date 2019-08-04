@@ -26,7 +26,7 @@ subprocess.call(['amixer', 'cset', 'numid=3', '1'])
 
 # setup Relays
 ChannelPin1 = 4
-ChannelPin2 = 11
+ChannelPin2 = 17
 r1 = PiRelay.Relay(ChannelPin1, "RELAY1")
 r2 = PiRelay.Relay(ChannelPin2, "RELAY2")
 
