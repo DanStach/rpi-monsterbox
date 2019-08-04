@@ -39,7 +39,7 @@ sound1 = PiSound.Sound(folderpath, fileExtension, player)
 random.seed()
 i = 0
 while(True):
-    i++
+    i = i+1
     print("#### Playing monster box: loop = ", i, " ####")
 
     print("### Playing Audio##")
