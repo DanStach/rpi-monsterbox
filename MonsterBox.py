@@ -42,11 +42,11 @@ while(True):
     i = i+1
     print("#### Playing monster box: loop = ", i, " ####")
 
-    print("### Playing Audio##")
-    sound1.playAllAudioFile(0)
-
     print("### Lights on##")
     r2.on()
+
+    print("### Playing Audio##")
+    sound1.playAllAudioFile(0)
 
     print("### Motor on and off ##")
     r1.onDelayOff(10)
