@@ -10,7 +10,7 @@ halloween monster box code
 https://www.amazon.com/hz/wishlist/ls/1JEQQ70HC1W4A?ref_=wl_share
 
 ### Install Instuctions
-simple install instuctions are located on install.md
+simple install instuctions are located on INSTALL.md
 
 full install tutorials:
  - https://learn.adafruit.com/neopixels-on-raspberry-pi/overview

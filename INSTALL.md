@@ -63,6 +63,11 @@ add code to file  /boot/config.txt
     /dev/spidev1.2
     ```
   
+### Enable Analog Audio (3.5mm jack) by default
+- `sudo raspi-config`
+- select Advanced Options --> Audio --> Force 3.5mm ('headphone') jack --> ok
+
+
 ### install python and pip
 - `sudo python3 -V`
 - verify verion 3 (Python 3.5.3)
