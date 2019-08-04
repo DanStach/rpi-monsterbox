@@ -6,6 +6,9 @@ import time
 from os import listdir
 import subprocess
 
+# set sound output to analog
+subprocess.call(['amixer', 'cset', 'numid=3', '1'])
+
 # get a list of MP3 files
 mp3_files = [ f for f in listdir('../music/') if f[-4:] == '.mp3' ]
 if not len(mp3_files) > 0:
