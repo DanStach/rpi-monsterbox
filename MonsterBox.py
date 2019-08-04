@@ -38,7 +38,7 @@ sound1 = PiSound.Sound(folderpath, fileExtension, player)
 
 random.seed()
 i = 0
-while(True)
+while(True):
     i++
     print("#### Playing monster box: loop = ", i, " ####")
 
@@ -50,7 +50,7 @@ while(True)
 
     print("### Motor on and off ##")
     r1.onDelayOff(10)
-    time.sleep(10) #wait for sounds finish
+    time.sleep(5) #wait for sounds finish
 
     print("### Lights off##")
     r2.off()
