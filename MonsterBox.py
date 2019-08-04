@@ -19,6 +19,10 @@ import PiSound
 import PiRelay
 import time
 import random
+import subprocess
+
+# set sound output on RPI to analog (headphones 3.5mm jack)
+subprocess.call(['amixer', 'cset', 'numid=3', '1'])
 
 # setup Relays
 ChannelPin1 = 4

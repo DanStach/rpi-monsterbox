@@ -6,7 +6,7 @@ import time
 from os import listdir
 import subprocess
 
-# set sound output to analog
+# set sound output on RPI to analog (headphones 3.5mm jack)
 subprocess.call(['amixer', 'cset', 'numid=3', '1'])
 
 # get a list of MP3 files
