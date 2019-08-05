@@ -9,6 +9,9 @@ halloween monster box code
 ## Current parts list:
 https://www.amazon.com/hz/wishlist/ls/1JEQQ70HC1W4A?ref_=wl_share
 
+## Current Project Video
+https://www.youtube.com/playlist?list=PLR6vpg1z3g55MTENOby3n9xlxO4WV3PW_
+
 ### Install Instuctions
 simple install instuctions are located on INSTALL.md
 
