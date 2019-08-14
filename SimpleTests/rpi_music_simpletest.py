@@ -9,7 +9,7 @@ import subprocess
 # set sound output on RPI
 #  'numid=3' set to analog (headphones 3.5mm jack)
 #  '50%'  set volume level
-subprocess.call(['amixer', 'cset', 'numid=3', '50%'])
+subprocess.call(['amixer', 'cset', 'numid=3', '90%'])
 
 # get a list of MP3 files
 mp3_files = [ f for f in listdir('../music/') if f[-4:] == '.mp3' ]
