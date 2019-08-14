@@ -1,10 +1,10 @@
 # rpi-monsterbox
-Currently in POC, not complete
+Version 1.O  Simple Monster mox: moving lid, glowing lights, scary sounds, at random intervalts 
 
 halloween monster box code
  - moving lid
- - glowing eyes
- - scary growling
+ - turn on box ligths
+ - play scary sound
  
 ## Current parts list:
 https://www.amazon.com/hz/wishlist/ls/1JEQQ70HC1W4A?ref_=wl_share

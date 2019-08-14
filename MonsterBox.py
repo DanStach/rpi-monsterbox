@@ -21,8 +21,11 @@ import time
 import random
 import subprocess
 
-# set sound output on RPI to analog (headphones 3.5mm jack)
-subprocess.call(['amixer', 'cset', 'numid=3', '1'])
+# set sound output on RPI
+#  'numid=3' set to analog (headphones 3.5mm jack)
+#  '90%'  set volume level
+# alterive command "amixer -c 0 set PCM  playback 100% unmute"
+subprocess.call(['amixer', 'cset', 'numid=3', '90%'])
 
 # setup Relays
 ChannelPin1 = 4
