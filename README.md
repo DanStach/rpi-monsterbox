@@ -1,5 +1,5 @@
 # rpi-monsterbox
-Version 1.O  Simple Monster mox: moving lid, glowing lights, scary sounds, at random intervals 
+version001.00 - Simple Monster Box: moving lid, glowing lights, scary sounds, at random intervals 
 
 halloween monster box code
  - moving lid
