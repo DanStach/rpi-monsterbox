@@ -25,8 +25,11 @@ full install tutorials:
 run MonsterBox.py file
 
 Run Example:
-```python3  MonsterBox.py```
+```cd code\rpi-monsterbox
+   python3  MonsterBox.py```
 
 Exit Example:
 <control> + c
+pkill -9 python
+pkill -9 -f MonsterBox.py
 
