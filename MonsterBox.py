@@ -21,23 +21,26 @@ import time
 import random
 import subprocess
 
-# set sound output on RPI
+print( $pwd )
+
+# setup Sound output on RPI
 #  'numid=3' set to analog (headphones 3.5mm jack)
 #  '90%'  set volume level
 # alterive command "amixer -c 0 set PCM  playback 100% unmute"
 subprocess.call(['amixer', 'cset', 'numid=3', '90%'])
 
-# setup Relays
+# setup Sounds class
+folderpath = "./music"
+fileExtension = ".mp3"
+player = "mplayer"
+sound1 = PiSound.Sound(folderpath, fileExtension, player)
+
+# setup Relays class
 ChannelPin1 = 4
 ChannelPin2 = 17
 r1 = PiRelay.Relay(ChannelPin1, "RELAY1")
 r2 = PiRelay.Relay(ChannelPin2, "RELAY2")
 
-# setup Sounds
-folderpath = "./music"
-fileExtension = ".mp3"
-player = "mplayer"
-sound1 = PiSound.Sound(folderpath, fileExtension, player)
 
 random.seed()
 i = 0
